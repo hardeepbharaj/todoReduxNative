@@ -16,9 +16,7 @@ const TodoReducer = (state = initialState, action) => {
 
     case DELETE_ITEM:
       let {courseGoal: courseGoal1} = state;
-      console.log('First courseGoal1 = ', courseGoal1);
       courseGoal1 = courseGoal1.filter(x => x.key !== action.payload);
-      console.log('delete courseGoal1 = ', courseGoal1);
       return {
         ...state,
         courseGoal: courseGoal1,
